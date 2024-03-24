@@ -1,17 +1,25 @@
+import { useDispatch } from "react-redux"
+import {
+  decrement,
+  increment,
+  reset,
+} from "../redux/features/counter/counterSlice"
+
 export const CounterNav = ({ count, setCount }) => {
+  const dispatch = useDispatch()
   return (
     <div className="counter-nav">
       <button
         onClick={() => {
-          setCount(count - 1)
+          dispatch(decrement())
         }}
       >
-        Decrease
+        Decrement
       </button>
 
       <button
         onClick={() => {
-          setCount(0)
+          dispatch(reset())
         }}
       >
         Reset
@@ -19,10 +27,10 @@ export const CounterNav = ({ count, setCount }) => {
 
       <button
         onClick={() => {
-          setCount(count + 1)
+          dispatch(increment())
         }}
       >
-        Increase
+        Increment
       </button>
     </div>
   )
