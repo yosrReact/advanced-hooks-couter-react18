@@ -6,7 +6,7 @@ export const CounterNav = ({ count, setCount }) => {
           setCount(count - 1)
         }}
       >
-        Decrease
+        Decrement
       </button>
 
       <button
@@ -22,7 +22,7 @@ export const CounterNav = ({ count, setCount }) => {
           setCount(count + 1)
         }}
       >
-        Increase
+        Increment
       </button>
     </div>
   )
