@@ -5,7 +5,7 @@ import {
   reset,
 } from "../redux/features/counter/counterSlice"
 
-export const CounterNav = ({ count, setCount }) => {
+export const CounterNav = () => {
   const dispatch = useDispatch()
   return (
     <div className="counter-nav">
