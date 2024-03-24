@@ -7,6 +7,7 @@ export const increaseAsync = createAsyncThunk(
   "counters/increseAsync",
   async (/* object containing data sent from the commponent */) => {
     await delay(2000)
+    throw new Error()
     return { message: "success" }
   }
 )
