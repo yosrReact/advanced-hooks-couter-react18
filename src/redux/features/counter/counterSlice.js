@@ -4,7 +4,7 @@ function delay(ms) {
 }
 
 export const increaseAsync = createAsyncThunk(
-  "counters/increseAsync",
+  "counters/increaseAsync",
   async (/* object containing data sent from the commponent */) => {
     await delay(2000)
     return { message: "success" }
