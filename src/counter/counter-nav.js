@@ -4,6 +4,7 @@ import {
   increment,
   reset,
   incrementByAmount,
+  increaseAsync,
 } from "../redux/features/counter/counterSlice"
 
 const VALUE = 5
@@ -40,6 +41,13 @@ export const CounterNav = ({ count, setCount }) => {
         }}
       >
         Increment with amount
+      </button>
+      <button
+        onClick={() => {
+          dispatch(increaseAsync())
+        }}
+      >
+        Increase async
       </button>
     </div>
   )
